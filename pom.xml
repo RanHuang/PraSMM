@@ -19,6 +19,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--jar-->
         <spring.version>4.3.20.RELEASE</spring.version>
+        <javax.servlet.verison>4.0.0</javax.servlet.verison>
+        <jstl.version>1.2</jstl.version>
     </properties>
 
     <build>
@@ -108,8 +110,24 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet.verison}</version>
         </dependency>
 
         <!--JUnit-->
