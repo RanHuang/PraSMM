@@ -21,6 +21,11 @@
         <spring.version>4.3.20.RELEASE</spring.version>
         <javax.servlet.verison>4.0.0</javax.servlet.verison>
         <jstl.version>1.2</jstl.version>
+        <!--DB-->
+        <mysql.connector.java.version>8.0.16</mysql.connector.java.version>
+        <mybatis.version>3.5.1</mybatis.version>
+        <druid.version>1.1.16</druid.version>
+        <mybatis.spring.version>2.0.1</mybatis.spring.version>
     </properties>
 
     <build>
@@ -120,6 +125,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
@@ -128,6 +139,28 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet.verison}</version>
+        </dependency>
+
+        <!--数据库配置-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis.spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
         </dependency>
 
         <!--JUnit-->
