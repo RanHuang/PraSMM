@@ -4,6 +4,7 @@ import com.hr.learn.model.User;
 import com.hr.learn.service.UserServiceI;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -19,12 +20,13 @@ public class UserController {
     private UserServiceI userServiceI;
 
     @RequestMapping("/findAll")
-    public String findAll() {
+    @ResponseBody
+    public List<User> findAll() {
         List<User> lstUser = userServiceI.findAll();
         for (User user : lstUser) {
             System.out.println("id: " + user.getId());
             System.out.println("name: " + user.getName());
         }
-        return "hello";
+        return lstUser;
     }
 }

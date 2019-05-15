@@ -21,11 +21,15 @@
         <spring.version>4.3.20.RELEASE</spring.version>
         <javax.servlet.verison>4.0.0</javax.servlet.verison>
         <jstl.version>1.2</jstl.version>
+        <jackson.version>2.9.8</jackson.version>
         <!--DB-->
         <mysql.connector.java.version>8.0.16</mysql.connector.java.version>
         <mybatis.version>3.5.1</mybatis.version>
         <druid.version>1.1.16</druid.version>
         <mybatis.spring.version>2.0.1</mybatis.spring.version>
+        <!--log-->
+        <slf4j.version>1.7.26</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <build>
@@ -141,6 +145,17 @@
             <version>${javax.servlet.verison}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
         <!--数据库配置-->
         <dependency>
             <groupId>mysql</groupId>
@@ -161,6 +176,22 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
+        </dependency>
+        <!--Log-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <!--JUnit-->
