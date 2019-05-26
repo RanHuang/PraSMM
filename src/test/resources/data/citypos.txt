@@ -311,7 +311,7 @@ geoadd cityposchina 102.42 23.01 云南省,绿春
 geoadd cityposchina 102.79 23.64 云南省,建水
 geoadd cityposchina 103.98 22.52 云南省,河口
 geoadd cityposchina 103.67 22.68 云南省,屏边
-geoadd cityposchina 100.79,22 云南省,景淇
+geoadd cityposchina 100.79 22 云南省,景淇
 geoadd cityposchina 100.5 21.95 云南省,勐海
 geoadd cityposchina 101.56 21.48 云南省,勐腊
 geoadd cityposchina 101.54 25.01 云南省,楚雄
@@ -342,7 +342,7 @@ geoadd cityposchina 98.6 24.41 云南省,潞西
 geoadd cityposchina 97.96 24.33 云南省,陇川
 geoadd cityposchina 97.93 24.69 云南省,盈江
 geoadd cityposchina 98.08 24.08 云南省,畹町
-geoadd cityposchina 97.83,24 云南省,瑞丽
+geoadd cityposchina 97.83 24 云南省,瑞丽
 geoadd cityposchina 98.3 24.78 云南省,梁河
 geoadd cityposchina 98.82 25.97 云南省,泸水
 geoadd cityposchina 98.95 26.55 云南省,碧江
@@ -467,7 +467,7 @@ geoadd cityposchina 123.5 43.52 吉林省,双辽
 geoadd cityposchina 122.82 45.63 吉林省,白城
 geoadd cityposchina 124.18 45.5 吉林省,大安
 geoadd cityposchina 124.82 45.2 吉林省,扶余
-geoadd cityposchina 124.02,45 吉林省,乾安
+geoadd cityposchina 124.02 45 吉林省,乾安
 geoadd cityposchina 123.97 44.3 吉林省,长岭
 geoadd cityposchina 123.13 44.82 吉林省,通榆
 geoadd cityposchina 122.75 45.35 吉林省,洮安
@@ -538,7 +538,7 @@ geoadd cityposchina 103.81 29.86 四川省,青神
 geoadd cityposchina 103.81 30.05 四川省,眉由
 geoadd cityposchina 103.83 30.22 四川省,彭由
 geoadd cityposchina 104.06 29.67 四川省,井研
-geoadd cityposchina 104.09,30 四川省,仁寿
+geoadd cityposchina 104.09 30 四川省,仁寿
 geoadd cityposchina 103.93 29.21 四川省,犍为
 geoadd cityposchina 103.98 28.96 四川省,沐川
 geoadd cityposchina 103.5 29.62 四川省,娥眉
@@ -587,7 +587,7 @@ geoadd cityposchina 106.83 32.36 四川省,南江
 geoadd cityposchina 106.73 31.86 四川省,巴中
 geoadd cityposchina 107.11 31.59 四川省,平昌
 geoadd cityposchina 108.24 31.95 四川省,通江
-geoadd cityposchina 108.18,32 四川省,百沙
+geoadd cityposchina 108.18 32 四川省,百沙
 geoadd cityposchina 102.97 29.97 四川省,雅安
 geoadd cityposchina 102.91 30.17 四川省,芦山
 geoadd cityposchina 103.06 30.09 四川省,名山
@@ -625,7 +625,7 @@ geoadd cityposchina 101.14 30.99 四川省,道孚
 geoadd cityposchina 100.28 30.03 四川省,理塘
 geoadd cityposchina 99.78 28.93 四川省,乡城
 geoadd cityposchina 100.31 29.04 四川省,稻城
-geoadd cityposchina 99,30 四川省,巴塘,99,30
+geoadd cityposchina 99 30 四川省,巴塘,99,30
 geoadd cityposchina 99.25 28.71 四川省,得荣
 geoadd cityposchina 102.29 27.92 四川省,西昌
 geoadd cityposchina 102.83 28.03 四川省,昭觉
@@ -838,7 +838,7 @@ geoadd cityposchina 116.3 35.91 山东省,东平
 geoadd cityposchina 116.59 35.38 山东省,济宁
 geoadd cityposchina 116.83 35.54 山东省,兖州
 geoadd cityposchina 117.27 35.65 山东省,泗水
-geoadd cityposchina 116.65,35 山东省,鱼台
+geoadd cityposchina 116.65 35 山东省,鱼台
 geoadd cityposchina 116.34 35.41 山东省,嘉祥
 geoadd cityposchina 116.49 35.71 山东省,汶上
 geoadd cityposchina 116.98 35.59 山东省,曲阜
@@ -895,7 +895,7 @@ geoadd cityposchina 112.95 38.5 山西省,定襄
 geoadd cityposchina 111.58 38.7 山西省,岢岚
 geoadd cityposchina 111.82 38.93 山西省,五寨
 geoadd cityposchina 111.47 39.45 山西省,偏关
-geoadd cityposchina 112.28,39 山西省,宁武
+geoadd cityposchina 112.28 39 山西省,宁武
 geoadd cityposchina 112.72 37.68 山西省,榆次
 geoadd cityposchina 113.37 38.01 山西省,孟县
 geoadd cityposchina 113.68 37.62 山西省,昔阳
@@ -918,7 +918,7 @@ geoadd cityposchina 112.02 37.42 山西省,文水
 geoadd cityposchina 111.75 37.27 山西省,汾阳
 geoadd cityposchina 111.8 37.12 山西省,孝义
 geoadd cityposchina 111.2 36.97 山西省,交口
-geoadd cityposchina 110.83,37 山西省,石楼
+geoadd cityposchina 110.83 37 山西省,石楼
 geoadd cityposchina 111.17 37.37 山西省,中阳
 geoadd cityposchina 110.95 37.95 山西省,临县
 geoadd cityposchina 110.85 37.45 山西省,柳林
@@ -1076,7 +1076,7 @@ geoadd cityposchina 119.36 34.09 江苏省,灌南
 geoadd cityposchina 118.79 34.12 江苏省,沭阳
 geoadd cityposchina 118.3 33.96 江苏省,宿迁
 geoadd cityposchina 118.68 33.73 江苏省,泗阳
-geoadd cityposchina 118.05,33 江苏省,盱眙
+geoadd cityposchina 118.05 33 江苏省,盱眙
 geoadd cityposchina 119.26 33.77 江苏省,涟水
 geoadd cityposchina 119.02 33.62 江苏省,淮阴
 geoadd cityposchina 119.15 33.5 江苏省,淮安
@@ -1111,7 +1111,7 @@ geoadd cityposchina 119.16 32.27 江苏省,仪征
 geoadd cityposchina 119.44 32.2 江苏省,镇江
 geoadd cityposchina 119.44 32.2 江苏省,丹徒
 geoadd cityposchina 119.81 32.24 江苏省,扬中
-geoadd cityposchina 119.55,32 江苏省,丹阳
+geoadd cityposchina 119.55 32 江苏省,丹阳
 geoadd cityposchina 119.95 31.78 江苏省,武进
 geoadd cityposchina 119.82 31.36 江苏省,宜兴
 geoadd cityposchina 119.56 31.74 江苏省,金坛
@@ -1152,7 +1152,7 @@ geoadd cityposchina 117.2 28.3 江西省,贵溪
 geoadd cityposchina 116.82 28.22 江西省,余江
 geoadd cityposchina 117.08 28.7 江西省,万年
 geoadd cityposchina 117.12 28.97 江西省,乐平
-geoadd cityposchina 116.68,29 江西省,波阳
+geoadd cityposchina 116.68 29 江西省,波阳
 geoadd cityposchina 116.69 28.7 江西省,于干
 geoadd cityposchina 117.43 28.42 江西省,弋阳
 geoadd cityposchina 114.38 27.81 江西省,宜春
@@ -1168,7 +1168,7 @@ geoadd cityposchina 115.54 28.07 江西省,清江
 geoadd cityposchina 114.92 27.81 江西省,新余
 geoadd cityposchina 114.68 27.82 江西省,分宜
 geoadd cityposchina 115.37 28.88 江西省,靖安
-geoadd cityposchina 116.34,28 江西省,抚州
+geoadd cityposchina 116.34 28 江西省,抚州
 geoadd cityposchina 116.29 27.95 江西省,临川
 geoadd cityposchina 116.77 27.92 江西省,金溪
 geoadd cityposchina 117.06 27.7 江西省,资溪
@@ -1262,7 +1262,7 @@ geoadd cityposchina 115.67 37.07 河北省,清河
 geoadd cityposchina 115.08 36.97 河北省,威县
 geoadd cityposchina 115.14 37.06 河北省,广宗
 geoadd cityposchina 115.02 37.06 河北省,平乡
-geoadd cityposchina 114.71,37 河北省,南和
+geoadd cityposchina 114.71 37 河北省,南和
 geoadd cityposchina 115.48 38.85 河北省,保定
 geoadd cityposchina 115.71 39.39 河北省,涞水
 geoadd cityposchina 115.98 39.48 河北省,涿县
@@ -1392,7 +1392,7 @@ geoadd cityposchina 113.42 35.24 河南省,修武
 geoadd cityposchina 114.35 36.1 河南省,安阳
 geoadd cityposchina 115.21 36.08 河南省,南乐
 geoadd cityposchina 115.46 35.9 河南省,范县
-geoadd cityposchina 115.83,36 河南省,台前
+geoadd cityposchina 115.83 36 河南省,台前
 geoadd cityposchina 114.52 35.57 河南省,滑县
 geoadd cityposchina 114.54 35.67 河南省,浚县
 geoadd cityposchina 114.17 35.6 河南省,淇县
@@ -1436,7 +1436,7 @@ geoadd cityposchina 113.47 34.16 河南省,禹县
 geoadd cityposchina 114.02 32.98 河南省,驻马店
 geoadd cityposchina 114.02 32.83 河南省,确山
 geoadd cityposchina 114 33.38 河南省,西平,114
-geoadd cityposchina 114.35,33 河南省,汝南
+geoadd cityposchina 114.35 33 河南省,汝南
 geoadd cityposchina 114.97 32.75 河南省,新蔡
 geoadd cityposchina 113.31 32.72 河南省,泌阳
 geoadd cityposchina 113.98 33.15 河南省,遂平
@@ -1576,7 +1576,7 @@ geoadd cityposchina 121.73 25.14 台湾省,基隆
 geoadd cityposchina 120.67 24.15 台湾省,台中
 geoadd cityposchina 120.19 22.98 台湾省,台南
 geoadd cityposchina 121.75 24.75 台湾省,宜兰
-geoadd cityposchina 121.3,25 台湾省,桃园
+geoadd cityposchina 121.3 25 台湾省,桃园
 geoadd cityposchina 120.96 24.81 台湾省,新竹
 geoadd cityposchina 113.33 22.13 澳门,澳门
 geoadd cityposchina 114.1 22.2 香港,香港
@@ -1693,7 +1693,7 @@ geoadd cityposchina 109.79 27.87 湖南省,麻阳
 geoadd cityposchina 109.77 26.16 湖南省,通道
 geoadd cityposchina 109.16 27.37 湖南省,新晃
 geoadd cityposchina 109.71 28.3 湖南省,吉首
-geoadd cityposchina 109.84,29 湖南省,永顺
+geoadd cityposchina 109.84 29 湖南省,永顺
 geoadd cityposchina 110.16 29.38 湖南省,桑植
 geoadd cityposchina 110.48 29.13 湖南省,大庸
 geoadd cityposchina 109.91 28.62 湖南省,古丈
@@ -1753,7 +1753,7 @@ geoadd cityposchina 106.28 33.9 甘肃省,两当
 geoadd cityposchina 105.28 34.02 甘肃省,西和
 geoadd cityposchina 105.35 34.7 甘肃省,甘谷
 geoadd cityposchina 104.48 34.87 甘肃省,漳县
-geoadd cityposchina 106.23,35 甘肃省,张家川
+geoadd cityposchina 106.23 35 甘肃省,张家川
 geoadd cityposchina 104.94 33.43 甘肃省,武都
 geoadd cityposchina 104.38 34.06 甘肃省,宕昌
 geoadd cityposchina 105.58 33.33 甘肃省,康县
@@ -1841,7 +1841,7 @@ geoadd cityposchina 117.34 23.99 福建省,云霄
 geoadd cityposchina 117.35 24.51 福建省,南靖
 geoadd cityposchina 117.75 24.62 福建省,长泰
 geoadd cityposchina 117.4 23.72 福建省,东山
-geoadd cityposchina 117.53,25 福建省,华安
+geoadd cityposchina 117.53 25 福建省,华安
 geoadd cityposchina 117.01 25.12 福建省,龙岩
 geoadd cityposchina 116.41 25.43 福建省,上杭
 geoadd cityposchina 116.81 24.76 福建省,永定
@@ -1983,7 +1983,7 @@ geoadd cityposchina 75.18 39.7 新疆维吾尔自治区,乌恰
 geoadd cityposchina 87.31 44.05 新疆维吾尔自治区,昌吉
 geoadd cityposchina 87.94 44.14 新疆维吾尔自治区,阜康
 geoadd cityposchina 89.52 44.02 新疆维吾尔自治区,奇台
-geoadd cityposchina 89.14,44 新疆维吾尔自治区,吉木萨尔
+geoadd cityposchina 89.14 44 新疆维吾尔自治区,吉木萨尔
 geoadd cityposchina 87.68 43.97 新疆维吾尔自治区,米泉
 geoadd cityposchina 86.22 44.28 新疆维吾尔自治区,玛纳斯
 geoadd cityposchina 86.92 44.18 新疆维吾尔自治区,呼图壁
@@ -2063,7 +2063,7 @@ geoadd cityposchina 104.91 25.1 贵州省,兴义
 geoadd cityposchina 104.96 25.79 贵州省,普安
 geoadd cityposchina 105.63 25.39 贵州省,贞丰
 geoadd cityposchina 106.09 25.17 贵州省,望谟
-geoadd cityposchina 105.79,25 贵州省,册亭
+geoadd cityposchina 105.79 25 贵州省,册亭
 geoadd cityposchina 105.49 25.11 贵州省,安龙
 geoadd cityposchina 105.18 25.44 贵州省,兴仁
 geoadd cityposchina 105.21 25.83 贵州省,晴龙
@@ -2094,9 +2094,9 @@ geoadd cityposchina 107.51 26.7 贵州省,福泉
 geoadd cityposchina 107.54 25.84 贵州省,独山
 geoadd cityposchina 106.74 25.43 贵州省,罗甸
 geoadd cityposchina 106.98 26.46 贵州省,龙里
-geoadd cityposchina 107.86,26 贵州省,三都
+geoadd cityposchina 107.86 26 贵州省,三都
 geoadd cityposchina 123.38 41.8 辽宁省,沈阳
-geoadd cityposchina 122.83,42 辽宁省,新民
+geoadd cityposchina 122.83 42 辽宁省,新民
 geoadd cityposchina 122.7 41.52 辽宁省,辽中
 geoadd cityposchina 121.62 38.92 辽宁省,大连
 geoadd cityposchina 121.7 39.13 辽宁省,金县
@@ -2125,12 +2125,12 @@ geoadd cityposchina 124.13 39.97 辽宁省,东沟
 geoadd cityposchina 123.25 40.3 辽宁省,岫岩
 geoadd cityposchina 124.05 40.47 辽宁省,凤城
 geoadd cityposchina 124.77 40.75 辽宁省,宽甸
-geoadd cityposchina 121.65,42 辽宁省,阜新
+geoadd cityposchina 121.65 42 辽宁省,阜新
 geoadd cityposchina 122.52 42.42 辽宁省,彰武
 geoadd cityposchina 122.18 40.65 辽宁省,营口
 geoadd cityposchina 122.37 40.42 辽宁省,盖县
 geoadd cityposchina 122.03 41.02 辽宁省,盘山
-geoadd cityposchina 122.06,41 辽宁省,大洼
+geoadd cityposchina 122.06 41 辽宁省,大洼
 geoadd cityposchina 123.17 41.28 辽宁省,辽阳
 geoadd cityposchina 123.34 41.43 辽宁省,灯塔
 geoadd cityposchina 123.85 42.32 辽宁省,铁岭
@@ -2182,7 +2182,7 @@ geoadd cityposchina 109.86 35.6 陕西省,黄龙
 geoadd cityposchina 109.42 35.76 陕西省,洛川
 geoadd cityposchina 109.11 35.43 陕西省,宜君
 geoadd cityposchina 109.27 35.6 陕西省,黄陵
-geoadd cityposchina 109.37,36 陕西省,富县
+geoadd cityposchina 109.37 36 陕西省,富县
 geoadd cityposchina 109.37 36.29 陕西省,甘泉
 geoadd cityposchina 108.78 36.84 陕西省,志丹
 geoadd cityposchina 108.22 36.93 陕西省,吴旗
@@ -2235,9 +2235,9 @@ geoadd cityposchina 106.95 33.65 陕西省,留坝
 geoadd cityposchina 107.32 33.16 陕西省,城固
 geoadd cityposchina 107.56 33.23 陕西省,洋县
 geoadd cityposchina 108 33.55 陕西省,佛坪,108
-geoadd cityposchina 107.77,33 陕西省,西乡
+geoadd cityposchina 107.77 33 陕西省,西乡
 geoadd cityposchina 107.91 32.56 陕西省,镇巴
-geoadd cityposchina 106.93,33 陕西省,南郑
+geoadd cityposchina 106.93 33 陕西省,南郑
 geoadd cityposchina 106.25 32.82 陕西省,宁强
 geoadd cityposchina 106.68 33.16 陕西省,勉县
 geoadd cityposchina 106.16 33.34 陕西省,略阳
@@ -2335,7 +2335,7 @@ geoadd cityposchina 130.5 44.9 黑龙江省,穆棱
 geoadd cityposchina 129.47 44.35 黑龙江省,宁安
 geoadd cityposchina 129.35 44.57 黑龙江省,海林
 geoadd cityposchina 126.95 45.52 黑龙江省,阿城
-geoadd cityposchina 126.58,46 黑龙江省,呼兰
+geoadd cityposchina 126.58 46 黑龙江省,呼兰
 geoadd cityposchina 127.38 46.08 黑龙江省,巴彦
 geoadd cityposchina 127.48 45.75 黑龙江省,宾县
 geoadd cityposchina 128.03 45.95 黑龙江省,木兰
