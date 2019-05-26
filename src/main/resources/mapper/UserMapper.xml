@@ -2,12 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hr.learn.mapper.UserMapper">
-    <!--配置二级缓存
+    <!--配置二级缓存-缓存以namespace为单位，增删改操作会清空namespace下的全部缓存
+        使用 cache-ref namespace 多个Mapper共享二级缓存
     eviction：失效策略；flushInterval：刷新间隔，单位毫秒； size:缓存数目,默认1024
     readOnly:只读缓存返回相同实例，读写缓存通过序列化返回对象拷贝；-->
     <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
 
-    <select id="findAll" resultType="com.hr.learn.model.User">
+    <!--useCache="false" : 禁用当前语句的二级缓存-->
+    <select id="findAll" useCache="false" resultType="com.hr.learn.model.User">
        select id,name,password from ssm_user
    </select>
 
