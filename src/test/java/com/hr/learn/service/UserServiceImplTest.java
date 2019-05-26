@@ -22,7 +22,7 @@ public class UserServiceImplTest extends JUnitContext {
     public void findAll() {
         List<User> lstUser = userService.findAll();
         System.out.println(lstUser);
-        Assert.assertEquals(2, lstUser.size());
+        Assert.assertEquals(6, lstUser.size());
     }
 
     @Test

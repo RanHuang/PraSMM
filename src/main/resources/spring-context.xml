@@ -9,6 +9,6 @@
 
     <import resource="classpath:db-context.xml"/>
 
-    <!---->
+    <!--开启切面，使用CGlib创建动态代理-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 </beans>
