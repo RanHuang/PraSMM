@@ -10,4 +10,6 @@ import java.util.List;
  **/
 public interface UserServiceI {
     List<User> findAll();
+
+    User findById(int id);
 }

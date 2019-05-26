@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hr.learn.mapper.UserMapper">
+
    <select id="findAll" resultType="com.hr.learn.model.User">
        select id,name,password from ssm_user
    </select>
+
+    <select id="findById" parameterType="int" resultType="com.hr.learn.model.User">
+        select id,name,password from ssm_user
+        where id=#{id}
+    </select>
 </mapper>
