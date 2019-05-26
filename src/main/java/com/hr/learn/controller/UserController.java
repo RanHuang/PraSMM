@@ -29,7 +29,7 @@ public class UserController {
      * http://localhost:8080/springmvc/user/users
      * @return
      */
-    @RequestMapping("/users")
+    @GetMapping("/users")
     @ResponseBody
     public List<User> findAll() {
         List<User> lstUser = userServiceI.findAll();

@@ -43,6 +43,7 @@
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
+    <!--spring整合mybatis一级缓存失效：https://blog.csdn.net/jield/article/details/50163327-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="com.hr.learn.mapper"/>
