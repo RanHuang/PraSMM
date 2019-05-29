@@ -17,7 +17,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--jar-->
-        <spring.version>4.3.20.RELEASE</spring.version>
+        <spring.version>5.1.7.RELEASE</spring.version>
         <javax.servlet.verison>4.0.0</javax.servlet.verison>
         <jstl.version>1.2</jstl.version>
         <jackson.version>2.9.8</jackson.version>
@@ -27,9 +27,16 @@
         <druid.version>1.1.16</druid.version>
         <mybatis.spring.version>2.0.1</mybatis.spring.version>
         <pagehelper.version>5.1.8</pagehelper.version>
+        <!--Redis-->
+        <spring.redis.version>2.1.8.RELEASE</spring.redis.version>
+        <jedis.version>2.9.1</jedis.version>
+        <commons.version>2.6.2</commons.version>
         <!--log-->
         <slf4j.version>1.7.26</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
+        <!--mq-->
+        <javax.jms.api.version>2.0.1</javax.jms.api.version>
+        <activemq.version>5.15.9</activemq.version>
     </properties>
 
     <build>
@@ -127,6 +134,11 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -182,6 +194,22 @@
             <artifactId>pagehelper</artifactId>
             <version>${pagehelper.version}</version>
         </dependency>
+        <!--Redis依赖-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring.redis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
         <!--Log-->
         <dependency>
             <groupId>log4j</groupId>
@@ -197,6 +225,17 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <!--MQ-->
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>${javax.jms.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${activemq.version}</version>
         </dependency>
 
         <!--JUnit-->

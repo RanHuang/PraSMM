@@ -2,7 +2,7 @@ package com.hr.learn.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hr.learn.JUnitContext;
+import com.context.ServiceTestContext;
 import com.hr.learn.model.User;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author nick
  * @date 19-5-15 星期三 21:11
  **/
-public class UserServiceImplTest extends JUnitContext {
+public class UserServiceImplTest extends ServiceTestContext {
     @Resource
     private UserServiceI userService;
 

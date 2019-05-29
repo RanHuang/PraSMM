@@ -7,7 +7,10 @@
     <display-name>Archetype Created Web Application</display-name>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-context.xml</param-value>
+        <param-value>
+            classpath:spring-context.xml
+            classpath:spring-resources.xml
+        </param-value>
     </context-param>
 
     <listener>
