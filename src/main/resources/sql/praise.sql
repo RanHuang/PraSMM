@@ -35,3 +35,24 @@ create table user_mood_praise_rel(
   key user_mood_praise_rel_user_id_index (user_id) using btree ,
   key user_mood_praise_rel_mood_id_index (mood_id) using btree
 ) engine =innodb default charset =utf8;
+
+
+-- -----------------Test Data------------------
+delete from user;
+insert into user values ('1', 'Lilei', 'digua');
+insert into user values ('2', 'HanMeimei', 'tudou');
+
+delete from mood;
+insert into mood
+values ('1', 'Today is a sunny day.', '1', '2019-06-02 11:07:38', '99');
+insert into mood
+values ('2', 'Today is children\'s day.', '2', '2019-06-01 10:11:12', 888);
+insert into mood
+values ('3', 'Today is a day.', '2', '2018-05-01 1:2:3', 333);
+
+-- ---------------------------------------------------
+select * from user;
+
+select * from mood;
+
+select * from user_mood_praise_rel;

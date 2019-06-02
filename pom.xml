@@ -37,6 +37,9 @@
         <!--mq-->
         <javax.jms.api.version>2.0.1</javax.jms.api.version>
         <activemq.version>5.15.9</activemq.version>
+
+        <!--JSON-->
+        <fastjson.version>1.2.54</fastjson.version>
     </properties>
 
     <build>
@@ -236,6 +239,13 @@
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-all</artifactId>
             <version>${activemq.version}</version>
+        </dependency>
+
+        <!--JSON-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
         <!--JUnit-->
