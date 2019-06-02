@@ -230,7 +230,7 @@
             <version>${slf4j.version}</version>
         </dependency>
         <!--MQ-->
-        <dependency>
+        <!--<dependency>
             <groupId>javax.jms</groupId>
             <artifactId>javax.jms-api</artifactId>
             <version>${javax.jms.api.version}</version>
@@ -239,7 +239,7 @@
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-all</artifactId>
             <version>${activemq.version}</version>
-        </dependency>
+        </dependency>-->
 
         <!--JSON-->
         <dependency>
