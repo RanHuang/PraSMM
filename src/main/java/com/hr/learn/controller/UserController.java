@@ -27,6 +27,7 @@ public class UserController {
 
     /**
      * http://localhost:8080/springmvc/user/users
+     *
      * @return
      */
     @GetMapping("/users")

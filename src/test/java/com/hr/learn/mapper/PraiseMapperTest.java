@@ -1,6 +1,5 @@
 package com.hr.learn.mapper;
 
-import com.context.ServiceTestContext;
 import com.context.ShowData;
 import com.hr.learn.model.praise.Mood;
 import com.hr.learn.model.praise.User;
@@ -13,8 +12,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @author nick
