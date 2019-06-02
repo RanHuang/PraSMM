@@ -28,7 +28,7 @@
         <mybatis.spring.version>2.0.1</mybatis.spring.version>
         <pagehelper.version>5.1.8</pagehelper.version>
         <!--Redis-->
-        <spring.redis.version>2.1.8.RELEASE</spring.redis.version>
+        <spring.redis.version>2.1.1.RELEASE</spring.redis.version>
         <jedis.version>2.9.1</jedis.version>
         <commons.version>2.6.2</commons.version>
         <!--log-->
