@@ -3,8 +3,8 @@ package com.hr.learn.controller;
 import com.hr.learn.model.praise.MoodVO;
 import com.hr.learn.service.PraiseServiceI;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -32,5 +32,16 @@ public class PraiseController {
         modelAndView.addObject("moods", lstMood);
         modelAndView.setViewName("mood");
         return modelAndView;
+    }
+
+    @GetMapping("/{moodId}/praise")
+    public String praiseMood(Model model,
+                             @PathVariable("moodId") String moodId,
+                             @RequestParam("userId") String userId) {
+        boolean isPraise = praiseService.praiseMood(userId, moodId);
+        List<MoodVO> lstMoods = praiseService.queryMood();
+        model.addAttribute("moods", lstMoods);
+        model.addAttribute("isPraise", isPraise);
+        return "mood";
     }
 }

@@ -4,9 +4,11 @@ import com.hr.learn.mapper.PraiseMapper;
 import com.hr.learn.model.praise.Mood;
 import com.hr.learn.model.praise.MoodVO;
 import com.hr.learn.model.praise.User;
+import com.hr.learn.model.praise.UserMoodPraiseRel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -49,5 +51,20 @@ public class PraiseServiceImpl implements PraiseServiceI {
         }
 
         return lstMoodVO;
+    }
+
+    @Override
+    public boolean praiseMood(String userId, String moodId) {
+        if (StringUtils.isEmpty(userId) || StringUtils.isEmpty(moodId)) {
+            return Boolean.FALSE;
+        }
+        UserMoodPraiseRel rel = new UserMoodPraiseRel();
+        rel.setUserId(userId);
+        rel.setMoodId(moodId);
+        praiseMapper.addUserMoodPraiseRel(rel);
+        Mood mood = praiseMapper.getMood(moodId);
+        mood.setPraiseNum(mood.getPraiseNum() + 1);
+        praiseMapper.updateMood(mood);
+        return Boolean.TRUE;
     }
 }

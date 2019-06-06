@@ -10,4 +10,6 @@ import java.util.List;
  **/
 public interface PraiseServiceI {
     List<MoodVO> queryMood();
+
+    boolean praiseMood(String userId, String moodId);
 }

@@ -16,5 +16,9 @@ public interface PraiseMapper {
 
     List<Mood> queryMood();
 
+    Mood getMood(@Param("id") String id);
+
+    int updateMood(@Param("mood") Mood mood);
+
     int addUserMoodPraiseRel(@Param("rel") UserMoodPraiseRel rel);
 }

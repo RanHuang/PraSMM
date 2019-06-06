@@ -7,10 +7,33 @@
         where id=#{id}
     </select>
 
+    <sql id="column_mood">
+        id,content,user_id as userId,praise_num as praiseNum,publish_time as publishTime
+    </sql>
+
     <select id="queryMood" resultType="com.hr.learn.model.praise.Mood">
-        select id,content,user_id as userId,praise_num as praiseNum,publish_time as publishTime
+        select <include refid="column_mood"/>
         from mood
     </select>
+
+    <select id="getMood" resultType="com.hr.learn.model.praise.Mood">
+        select <include refid="column_mood"/>
+        from mood
+        where id=#{id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateMood" parameterType="com.hr.learn.model.praise.Mood">
+        update mood
+        <set>
+            <if test="mood.content != null and mood.content != ''">
+                content=#{mood.content},
+            </if>
+            <if test="mood.praiseNum != null">
+                praise_num=#{mood.praiseNum},
+            </if>
+        </set>
+        where id=#{mood.id}
+    </update>
 
     <insert id="addUserMoodPraiseRel" parameterType="com.hr.learn.model.praise.UserMoodPraiseRel"
         useGeneratedKeys="true" keyProperty="id" >

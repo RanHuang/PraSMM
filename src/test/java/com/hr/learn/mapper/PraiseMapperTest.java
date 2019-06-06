@@ -39,6 +39,24 @@ public class PraiseMapperTest extends ShowData {
     }
 
     @Test
+    public void testFindMoodById() {
+        String id = "1";
+        Mood mood = praiseMapper.getMood(id);
+        Assert.assertNotNull(mood);
+        Assert.assertEquals(id, mood.getId());
+    }
+
+    @Test
+    public void testUpdateMood() {
+        Mood mood = new Mood();
+        mood.setId("2");
+        mood.setContent("Nick is tall.");
+        mood.setPraiseNum(222);
+        int ret = praiseMapper.updateMood(mood);
+        Assert.assertEquals(1, ret);
+    }
+
+    @Test
     public void testSaveUserMoodPraiseRel() {
         UserMoodPraiseRel rel = new UserMoodPraiseRel();
         rel.setUserId("2");
