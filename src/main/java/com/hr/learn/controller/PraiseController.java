@@ -31,7 +31,6 @@ public class PraiseController {
 
     /**
      * http://localhost:8080/springmvc/praise/moods
-     *
      */
     @RequestMapping("/moods")
     public ModelAndView queryAllMood() {

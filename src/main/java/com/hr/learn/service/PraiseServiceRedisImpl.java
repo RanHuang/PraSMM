@@ -78,6 +78,7 @@ public class PraiseServiceRedisImpl implements PraiseServiceI {
         // 发送异步消息
         UserMoodPraiseRel rel = new UserMoodPraiseRel(userId, moodId);
         moodProducer.sendMessage(destination, rel);
+        // 向Redis写入数据
         /*this.setOperations.add(RedisConstant.REDIS_SET_KEY_PRAISE, moodId);
         this.setOperations.add(moodId, userId);*/
         return true;
