@@ -5,4 +5,5 @@
     <!--导入Spring配置文件-->
     <import resource="classpath:db-context.xml"/>
     <import resource="classpath:redis-context.xml"/>
+    <import resource="classpath:jms-context.xml"/>
 </beans>

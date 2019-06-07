@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/jms https://www.springframework.org/schema/jms/spring-jms.xsd">
+
+    <context:property-placeholder location="classpath:jms.properties" ignore-unresolvable="true"/>
+
+    <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <description>JMS连接工厂</description>
+        <property name="targetConnectionFactory">
+            <bean class="org.apache.activemq.spring.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="tcp://172.17.0.4:61616"/>
+                <property name="userName" value="admin"/>
+                <property name="password" value="admin"/>
+            </bean>
+        </property>
+        <property name="sessionCacheSize" value="100"/>
+    </bean>
+
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <description>队列模式模型</description>
+        <constructor-arg ref="connectionFactory"/>
+        <property name="receiveTimeout" value="10000"/>
+        <!-- true-Topic; false-Queue -->
+        <property name="pubSubDomain" value="false"/>
+    </bean>
+
+    <jms:listener-container destination-type="queue"
+                            container-type="default"
+                            connection-factory="connectionFactory"
+                            acknowledge="auto">
+        <jms:listener destination="com.hr.learn.jms.praise" ref="moodConsumer"/>
+    </jms:listener-container>
+</beans>

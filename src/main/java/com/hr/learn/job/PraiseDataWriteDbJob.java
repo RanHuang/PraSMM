@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Objects;
@@ -45,6 +46,9 @@ public class PraiseDataWriteDbJob implements RedisConstant {
 
         int count = 0;
         for (String moodId : moodIds) {
+            if (StringUtils.isEmpty(moodId)) {
+                continue;
+            }
             Set<String> userIds = redisTemplate.opsForSet().members(moodId);
             if (CollectionUtils.isEmpty(userIds)) {
                 logger.info("定时任务，存在moodId:{}, 但是不存在点赞用户", moodId);

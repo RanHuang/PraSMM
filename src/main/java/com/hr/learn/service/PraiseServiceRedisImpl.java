@@ -1,10 +1,12 @@
 package com.hr.learn.service;
 
-import com.hr.learn.constant.RedisConstant;
+import com.hr.learn.jms.MoodProducer;
 import com.hr.learn.mapper.PraiseMapper;
 import com.hr.learn.model.praise.Mood;
 import com.hr.learn.model.praise.MoodVO;
 import com.hr.learn.model.praise.User;
+import com.hr.learn.model.praise.UserMoodPraiseRel;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SetOperations;
 import org.springframework.stereotype.Service;
 
+import javax.jms.Destination;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +29,10 @@ public class PraiseServiceRedisImpl implements PraiseServiceI {
     private PraiseMapper praiseMapper;
     private RedisTemplate<String, String> redisTemplate;
     private SetOperations<String, String> setOperations;
+
+    @Autowired
+    private MoodProducer moodProducer;
+    private static Destination destination = new ActiveMQQueue("com.hr.learn.jms.praise");
 
     @Autowired
     public PraiseServiceRedisImpl(PraiseMapper praiseMapper, RedisTemplate<String, String> redisTemplate) {
@@ -68,8 +75,11 @@ public class PraiseServiceRedisImpl implements PraiseServiceI {
 
     @Override
     public boolean praiseMood(String userId, String moodId) {
-        this.setOperations.add(RedisConstant.REDIS_SET_KEY_PRAISE, moodId);
-        this.setOperations.add(moodId, userId);
+        // 发送异步消息
+        UserMoodPraiseRel rel = new UserMoodPraiseRel(userId, moodId);
+        moodProducer.sendMessage(destination, rel);
+        /*this.setOperations.add(RedisConstant.REDIS_SET_KEY_PRAISE, moodId);
+        this.setOperations.add(moodId, userId);*/
         return true;
     }
 }
