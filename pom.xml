@@ -36,8 +36,7 @@
         <log4j.version>1.2.17</log4j.version>
         <!--mq-->
         <javax.jms.api.version>2.0.1</javax.jms.api.version>
-        <activemq.version>5.15.9</activemq.version>
-
+        <activemq.version>5.11.2</activemq.version>
         <!--JSON-->
         <fastjson.version>1.2.54</fastjson.version>
     </properties>
@@ -230,7 +229,7 @@
             <version>${slf4j.version}</version>
         </dependency>
         <!--MQ-->
-        <!--<dependency>
+        <dependency>
             <groupId>javax.jms</groupId>
             <artifactId>javax.jms-api</artifactId>
             <version>${javax.jms.api.version}</version>
@@ -239,7 +238,17 @@
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-all</artifactId>
             <version>${activemq.version}</version>
-        </dependency>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.geronimo.specs</groupId>
+                    <artifactId>geronimo-jms_1.1_spec</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <!--JSON-->
         <dependency>
