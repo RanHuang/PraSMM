@@ -1,5 +1,6 @@
 package com.hr.learn.service;
 
+import com.hr.learn.constant.RedisConstant;
 import com.hr.learn.mapper.PraiseMapper;
 import com.hr.learn.model.praise.Mood;
 import com.hr.learn.model.praise.MoodVO;
@@ -16,13 +17,11 @@ import java.util.List;
 
 /**
  * @author nick
- * @date 2019-06-07 星期五 10:20
+ * date 2019-06-07 星期五 10:20
  **/
 @Service("praiseServiceRedis")
 public class PraiseServiceRedisImpl implements PraiseServiceI {
     private static final Logger logger = LoggerFactory.getLogger(PraiseServiceRedisImpl.class);
-
-    private static final String REDIS_KEY_PRAISE = "com.hr.learn.springmvc.praise";
 
     private PraiseMapper praiseMapper;
     private RedisTemplate<String, String> redisTemplate;
@@ -46,8 +45,8 @@ public class PraiseServiceRedisImpl implements PraiseServiceI {
             moodVO.setId(mood.getId());
             moodVO.setContent(mood.getContent());
             int praiseNumDb = mood.getPraiseNum();
-            int praiseNumRedis = this.setOperations.size(mood.getId()).intValue();
-            int praiseNum = praiseNumDb + praiseNumRedis;
+            Long praiseNumRedis = this.setOperations.size(mood.getId());
+            int praiseNum = praiseNumDb + (praiseNumRedis == null ? 0 : praiseNumRedis.intValue());
             moodVO.setPraiseNum(praiseNum);
             String userId = mood.getUserId();
             moodVO.setUserId(userId);
@@ -69,7 +68,7 @@ public class PraiseServiceRedisImpl implements PraiseServiceI {
 
     @Override
     public boolean praiseMood(String userId, String moodId) {
-        this.setOperations.add(REDIS_KEY_PRAISE, moodId);
+        this.setOperations.add(RedisConstant.REDIS_SET_KEY_PRAISE, moodId);
         this.setOperations.add(moodId, userId);
         return true;
     }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @author nick
- * @date 19-6-2 星期日 11:24
+ * date 19-6-2 星期日 11:24
  **/
 public class UserMoodPraiseRel implements Serializable {
     private static final long serialVersionUID = 4242650782462240027L;
@@ -12,6 +12,15 @@ public class UserMoodPraiseRel implements Serializable {
     private String id;
     private String userId;
     private String moodId;
+
+    public UserMoodPraiseRel() {
+
+    }
+
+    public UserMoodPraiseRel(String userId, String moodId) {
+        this.userId = userId;
+        this.moodId = moodId;
+    }
 
     public String getId() {
         return id;

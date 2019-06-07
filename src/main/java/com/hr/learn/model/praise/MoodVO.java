@@ -1,12 +1,12 @@
 package com.hr.learn.model.praise;
 
-import com.hr.learn.model.praise.Mood;
-
 /**
  * @author nick
- * @date 19-6-2 星期日 17:21
+ * date 19-6-2 星期日 17:21
  **/
 public class MoodVO extends Mood {
+    private static final long serialVersionUID = -5224481270041468148L;
+
     private String userName;
     private String userAccount;
 

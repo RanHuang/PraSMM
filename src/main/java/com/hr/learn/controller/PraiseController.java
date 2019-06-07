@@ -13,11 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Random;
 
 /**
  * @author nick
- * @date 19-6-2 星期日 17:17
+ * date 19-6-2 星期日 17:17
  **/
 @Controller
 @RequestMapping("/praise")
@@ -30,12 +29,9 @@ public class PraiseController {
     @Qualifier("praiseServiceRedis")
     private PraiseServiceI praiseServiceRedis;
 
-    private Random random = new Random(System.currentTimeMillis());
-
     /**
      * http://localhost:8080/springmvc/praise/moods
      *
-     * @return
      */
     @RequestMapping("/moods")
     public ModelAndView queryAllMood() {
@@ -61,8 +57,6 @@ public class PraiseController {
     public String praiseMoodRedis(Model model,
                                   @PathVariable("moodId") String moodId,
                                   @RequestParam("userId") String userId) {
-        // 为显示模拟效果，随机生成userId
-        userId = random.nextInt(1000) + "";
         boolean isPraise = praiseServiceRedis.praiseMood(userId, moodId);
         List<MoodVO> lstMoods = praiseServiceRedis.queryMood();
         model.addAttribute("moods", lstMoods);
