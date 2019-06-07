@@ -24,7 +24,7 @@
             <b>发表时间:</b><span id="publish_time">${mood.publishTime}</span><br>
             <b>点赞数量:</b><span id="praise_num">${mood.praiseNum}</span><br>
             <div style="margin-left: 350px;">
-                <a id="praise" href="/springmvc/praise/${mood.id}/praise?userId=${mood.userId}">赞</a>
+                <a id="praise" href="/springmvc/praise/${mood.id}/praiseRedis?userId=${mood.userId}">赞</a>
             </div>
         </c:forEach>
     </div>

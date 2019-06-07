@@ -4,29 +4,40 @@ import com.hr.learn.mapper.PraiseMapper;
 import com.hr.learn.model.praise.Mood;
 import com.hr.learn.model.praise.MoodVO;
 import com.hr.learn.model.praise.User;
-import com.hr.learn.model.praise.UserMoodPraiseRel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SetOperations;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author nick
- * @date 19-6-2 星期日 17:23
+ * @date 2019-06-07 星期五 10:20
  **/
-@Service("praiseService")
-public class PraiseServiceImpl implements PraiseServiceI {
-    private static final Logger logger = LoggerFactory.getLogger(PraiseServiceImpl.class);
+@Service("praiseServiceRedis")
+public class PraiseServiceRedisImpl implements PraiseServiceI {
+    private static final Logger logger = LoggerFactory.getLogger(PraiseServiceRedisImpl.class);
 
-    @Resource
+    private static final String REDIS_KEY_PRAISE = "com.hr.learn.springmvc.praise";
+
     private PraiseMapper praiseMapper;
+    private RedisTemplate<String, String> redisTemplate;
+    private SetOperations<String, String> setOperations;
+
+    @Autowired
+    public PraiseServiceRedisImpl(PraiseMapper praiseMapper, RedisTemplate<String, String> redisTemplate) {
+        this.praiseMapper = praiseMapper;
+        this.redisTemplate = redisTemplate;
+        this.setOperations = redisTemplate.opsForSet();
+    }
 
     @Override
     public List<MoodVO> queryMood() {
+        this.redisTemplate.opsForSet();
         List<Mood> lstMood = praiseMapper.queryMood();
 
         List<MoodVO> lstMoodVO = new ArrayList<>(lstMood.size());
@@ -34,7 +45,10 @@ public class PraiseServiceImpl implements PraiseServiceI {
             MoodVO moodVO = new MoodVO();
             moodVO.setId(mood.getId());
             moodVO.setContent(mood.getContent());
-            moodVO.setPraiseNum(mood.getPraiseNum());
+            int praiseNumDb = mood.getPraiseNum();
+            int praiseNumRedis = this.setOperations.size(mood.getId()).intValue();
+            int praiseNum = praiseNumDb + praiseNumRedis;
+            moodVO.setPraiseNum(praiseNum);
             String userId = mood.getUserId();
             moodVO.setUserId(userId);
             moodVO.setPublishTime(mood.getPublishTime());
@@ -55,16 +69,8 @@ public class PraiseServiceImpl implements PraiseServiceI {
 
     @Override
     public boolean praiseMood(String userId, String moodId) {
-        if (StringUtils.isEmpty(userId) || StringUtils.isEmpty(moodId)) {
-            return Boolean.FALSE;
-        }
-        UserMoodPraiseRel rel = new UserMoodPraiseRel();
-        rel.setUserId(userId);
-        rel.setMoodId(moodId);
-        praiseMapper.addUserMoodPraiseRel(rel);
-        Mood mood = praiseMapper.getMood(moodId);
-        mood.setPraiseNum(mood.getPraiseNum() + 1);
-        praiseMapper.updateMood(mood);
-        return Boolean.TRUE;
+        this.setOperations.add(REDIS_KEY_PRAISE, moodId);
+        this.setOperations.add(moodId, userId);
+        return true;
     }
 }
