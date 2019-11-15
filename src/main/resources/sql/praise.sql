@@ -1,4 +1,8 @@
--- -----------------Table for User---------------------------
+-- -----------------Database---------------------------
+create database if not exists ssm;
+use ssm;
+
+-- -----------------Table for User-------------------------
 DROP TABLE IF EXISTS user;
 
 create table user
@@ -38,11 +42,13 @@ create table user_mood_praise_rel(
 
 
 -- -----------------Test Data------------------
-delete from user;
+delete from user where id=1;
+
 insert into user values ('1', 'Lilei', 'digua');
 insert into user values ('2', 'HanMeimei', 'tudou');
 
-delete from mood;
+delete from mood where id=1;
+
 insert into mood
 values ('1', 'Today is a sunny day.', '1', '2019-06-02 11:07:38', '99');
 insert into mood
