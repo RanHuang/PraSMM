@@ -27,11 +27,11 @@
 
     <!--通过设置useCache来规定这个sql是否开启二级缓存，true是开启，false是关闭-->
     <select id="findAll" useCache="false" resultType="com.hr.learn.model.User">
-       select id,name,password from ssm_user
+       select id,name,account from user
    </select>
 
     <select id="findById" parameterType="int" resultType="com.hr.learn.model.User">
-        select id,name,password from ssm_user
+        select id,name,account from user
         where id=#{id}
     </select>
 </mapper>
