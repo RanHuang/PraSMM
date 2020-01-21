@@ -17,7 +17,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--jar-->
-        <spring.version>5.1.7.RELEASE</spring.version>
+        <spring.version>5.2.3.RELEASE</spring.version>
         <javax.servlet.verison>4.0.0</javax.servlet.verison>
         <jstl.version>1.2</jstl.version>
         <jackson.version>2.10.1</jackson.version>
