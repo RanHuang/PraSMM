@@ -20,7 +20,7 @@
         <spring.version>5.1.7.RELEASE</spring.version>
         <javax.servlet.verison>4.0.0</javax.servlet.verison>
         <jstl.version>1.2</jstl.version>
-        <jackson.version>2.10.1</jackson.version>
+        <jackson.version>2.12.1</jackson.version>
         <!--DB-->
         <mysql.connector.java.version>8.0.16</mysql.connector.java.version>
         <mybatis.version>3.5.1</mybatis.version>
